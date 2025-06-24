@@ -1,57 +1,57 @@
-# -Coffee-Shop-Investment-Analysis
-This project analyzes historical sales data from multiple coffee shop locations to identify investment opportunities.
-📌 Project Overview
+☕ Coffee Shop Investment Analysis.
 
-This project analyzes historical sales data from multiple coffee shop locations to identify investment opportunities. The goal is to determine which stores and products are most profitable and when sales peak, in order to guide strategic business decisions.
+🎯 Project Goal
+The main objective of this project is to identify which coffee shop locations and product categories are most profitable, in order to recommend the best investment opportunities. Using historical sales data, we explore store-level performance, product trends, and time-based sales patterns.
 
- #Objectives
+📦 Dataset Overview
+The dataset used includes transaction-level sales data from multiple coffee shop locations. Key fields include:
 
-Identify which store locations generate the most revenue and have the highest customer value.
-Discover which product categories and types contribute most to revenue.
-Uncover time-based sales trends by weekday and hour.
-Provide actionable recommendations for improving profitability.
+transaction_date and transaction_time
+store_location
+product_category and product_type
+unit_price and transaction_qty
+🔧 Data Cleaning & Preparation
 
-#Data Cleaning
+To ensure accurate and reliable insights, the dataset was cleaned and transformed using the following steps:
 
-Removed missing or incomplete entries in key fields like dates, quantity, and price.
-Converted transaction_date into proper date format.
-Created derived features:
+Date Conversion: Parsed transaction_date to Date format and transaction_time to extract hour.
+New Variables Created:
 total_price = unit_price × transaction_qty
-weekday and hour extracted from transaction data
-Resolved label inconsistencies in product categories.
+weekday (Monday–Sunday)
+hour (Hour extracted from time)
+Missing Values: Rows with missing values in key fields were removed.
+Data Types: Ensured all numerical and categorical variables had the correct data type.
+Consistency Checks: Verified store and product labels were consistent.
 
-#Exploratory Analysis (EDA)
+🔍 Exploratory Data Analysis (EDA)
 
-*Store Performance
-Stores like Chicago and Seattle lead in both revenue and average order value.
-Store volume and order value vary significantly across locations.
+🏪 Store Performance Analysis
+Total Revenue: Identified which stores generate the most income.
+Average Order Value (AOV): Assessed customer spending behavior across locations.
+Transaction Volume: Evaluated traffic per store.
+Insight: A few key stores stand out for both high revenue and customer volume — ideal targets for future investment.
 
-*Product Analysis
-Coffee drinks are top-selling across all stores.
-Some products have high volume but low revenue, which may reduce margins.
+📦 Product Category Trends
+Top Categories by Revenue and Volume: Coffee drinks and baked goods perform the best.
+Average Price by Category: Useful to assess value perception vs sales.
+Visualization: Bar charts show the dominance of a few key categories.
+Insight: Some product categories sell a lot but contribute little to revenue — opportunity for pricing adjustments or promotion strategy.
 
-* Time-Based Insights
-Sales peak during 8–11 a.m. and on Fridays/Saturdays, suggesting breakfast is key.
-Sunday shows lower engagement across stores.
+🕒 Temporal Sales Patterns
+By Weekday: Weekends show higher revenue peaks.
+By Hour: Morning hours (8–11 AM) have the highest sales activity.
+Heatmap: Strong visual confirmation of peak hours and days.
+Insight: Focus marketing efforts and staff scheduling on peak times to increase efficiency and profit margins.
 
- #Key Recommendations
+🧁 Product Trends Within Stores
+Revenue by Product Category per Store: Analyzed which categories perform best by location.
+Top-Selling Products: Identified product types with the highest contribution to revenue by store.
+Insight: Some products are consistently top-performers across multiple locations — ideal for bundling or expanding.
 
-Invest in high-performing stores with both strong revenue and order value.
-Focus marketing during peak hours and weekends.
-Review low-performing items with high volume but low revenue contribution.
-Promote categories like coffee and baked goods which show high margin potential.
+✅ Conclusions & Recommendations
 
-*Files Included
-
-Proyecto_Final_R.Rmd: The full R Markdown analysis script.
-Coffee Shop Sales.csv: The dataset used in this project.
-HTML output (rendered report) [optional: hosted version or PDF].
-
-#Final Thoughts
-
-This project showcases the use of R for practical business analysis. It applies data wrangling, visualization, and statistical thinking to real-world retail data, supporting better investment decisions in the coffee shop industry.
-
-
-Author: Paola Baez
-Date: June 22, 2025
-Tools: R, Tidyverse, ggplot2, lubridate.
+📍 Top Store Locations should be prioritized for expansion or investment.
+⏰ Peak Hours & Days reveal when to focus promotions and staffing.
+💸 High-Volume, Low-Revenue Products should be reviewed to improve profit margins.
+☕ Top Product Categories like coffee drinks and baked goods are safe bets for investment and promotion.
+🧠 Data-Driven Decisions: This analysis supports strategic planning for franchise expansion, pricing, and marketing.
